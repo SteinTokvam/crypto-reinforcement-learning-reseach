@@ -12,7 +12,7 @@ def open_and_convert_data(path: str):
 def create_merged_dataframe(path: str) -> pd.DataFrame :
     dfs = []
     print('compiling dataframe...')
-
+    print(f'percentage_buy: {os.environ.get("percentage_buy", 10)}')
     for file in os.listdir(path):
         file_path = os.path.join(path, file)
         if file.endswith('.csv'):

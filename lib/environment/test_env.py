@@ -116,7 +116,7 @@ class CryptoTradingEnv(gym.Env):
         # Utfør handlingen
         if action == 1:  # Kjøp
             if self.balance > 0:  # Hvis vi har penger til å kjøpe
-                amount_to_buy = (self.balance * float(percentage_puy/100)) / current_price
+                amount_to_buy = (self.balance * (float(percentage_puy)/100)) / current_price
                 self.crypto_held += amount_to_buy
                 self.balance -= amount_to_buy * current_price
                 self.balance -= self.balance * self.trading_fee_percent  # Trading fee
