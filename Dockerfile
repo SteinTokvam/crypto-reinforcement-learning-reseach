@@ -1,7 +1,9 @@
 FROM ubuntu:latest
 LABEL org.opencontainers.image.source="https://github.com/SteinTokvam/crypto-reinforcement-learning-reseach"
 
-ENV percentage_buy 10
+# Ikke i bruk
+ENV percentage_buy 10 
+
 USER root
 WORKDIR /app
 
